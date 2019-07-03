@@ -3,7 +3,7 @@ package VendingMachine
 import Cigars.{Pack, PackStock}
 import mall.Price
 
-case class VendingMachine ( mall: String, var packStocks: Seq[PackStock], var profits: Price ) {
+case class VendingMachine ( mall: String, var packStocks: Seq[PackStock], var profits: Price , UUID: String) {
 
   def getPack(cigarreteType: String): Pack = {
     var pack:Pack = null

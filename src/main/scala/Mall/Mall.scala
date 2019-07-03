@@ -12,4 +12,9 @@ case class Mall (machines: Seq[VendingMachine]){
   def getAllProfits(): Price = {
     machines.map( m => m.profits).sum
   }
+
+
+  def getMachineByUUID(UUID: String): VendingMachine = {
+    machines.find( m => m.UUID == UUID)
+  }
 }
